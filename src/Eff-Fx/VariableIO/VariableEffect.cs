@@ -1,6 +1,6 @@
 ﻿using Nessos.Effects;
 
-namespace Eff_Fx.Variable
+namespace Eff_Fx.VariableIO
 {
     public static class VariableEffect
     {

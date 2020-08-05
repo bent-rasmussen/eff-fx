@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace Eff_Fx.FileSystem
+namespace Eff_Fx.FileSystemIO
 {
 	public static class FileSystemTest
     {
@@ -43,6 +43,7 @@ namespace Eff_Fx.FileSystem
 						Changed = await FileSystemEffect.LastWriteTime(info),
 						Length = (info.kind == FileKind.File ? (long?)await FileEffect.Length(info.path) : null),
 					};
+				Console.WriteLine(result.ToString());
 				results.Add(result);
 			}
 

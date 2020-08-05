@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace Eff_Fx.FileSystem
+namespace Eff_Fx.FileSystemIO
 {
 	public static class FileSystemEffect
 	{

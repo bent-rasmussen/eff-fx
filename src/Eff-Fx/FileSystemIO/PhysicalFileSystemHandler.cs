@@ -6,7 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Eff_Fx.FileSystem
+namespace Eff_Fx.FileSystemIO
 {
 	public abstract class PhysicalFileSystemHandlerBase : EffectHandler
 	{
