@@ -3,7 +3,7 @@ using Nessos.Effects.Handlers;
 using System.Threading.Channels;
 using System.Threading.Tasks;
 
-namespace Eff_Fx.ChannelIO
+namespace Eff_Fx.ChannelFx
 {
     public class ChannelEffectHandler<TMessage> : EffectHandler
 	{

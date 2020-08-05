@@ -1,4 +1,4 @@
-﻿using Eff_Fx.FileSystemIO;
+﻿using Eff_Fx.FileFx;
 using System;
 using System.Threading.Tasks;
 
@@ -9,7 +9,7 @@ namespace Eff_Fx
         static async Task Main(string[] args)
         {
             Console.WriteLine("Executing...");
-            await FileSystemTest.Test(@"c:\");
+            await FileTest.Test(@"c:\");
             Console.WriteLine("Done.");
         }
     }

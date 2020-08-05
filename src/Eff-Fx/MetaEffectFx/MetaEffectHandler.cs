@@ -3,8 +3,13 @@ using Nessos.Effects.Handlers;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Eff_Fx.MetaEffectIO
+namespace Eff_Fx.MetaEffectFx
 {
+    /// <summary>
+    /// Meta effect handler.
+    /// 
+    /// Meta effects are effects that add and remove effect handlers from a handler stack.
+    /// </summary>
     public class MetaEffectHandler : EffectHandler
 	{
 		public MetaEffectHandler(params IEffectHandler[] handlers)

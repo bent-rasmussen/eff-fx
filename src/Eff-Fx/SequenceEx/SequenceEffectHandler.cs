@@ -3,7 +3,7 @@ using Nessos.Effects.Handlers;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Eff_Fx.SequenceIO
+namespace Eff_Fx.SequenceFx
 {
     public class SequenceEffectHandler<TSource> : EffectHandler
 	{

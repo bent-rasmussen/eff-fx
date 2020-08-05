@@ -3,7 +3,7 @@ using Nessos.Effects.Handlers;
 using System;
 using System.Threading.Tasks;
 
-namespace Eff_Fx.ConsoleIO
+namespace Eff_Fx.ConsoleFx
 {
     // Console Effect Handler
 

@@ -4,14 +4,14 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace Eff_Fx.FileSystemIO
+namespace Eff_Fx.FileFx
 {
-	public static class FileSystemTest
+	public static class FileTest
     {
 		public static async Task Test(string root)
 		{
 			// Physical file system interpretation of file system effects
-			var physicalHandler = new PhysicalFileSystemHandler(root);
+			var physicalHandler = new PhysicalFileHandler(root);
 
 			// Run test
 			await TestImpl().Run(physicalHandler);
@@ -30,7 +30,7 @@ namespace Eff_Fx.FileSystemIO
 			await Task.Delay(200);
 
 			// gets all files in the "temp" folder
-			foreach (var info in await DirectoryIO.Enumerate("temp"))
+			foreach (var info in await DirectoryEffect.Enumerate("temp"))
 			{
 				var result =
 					new

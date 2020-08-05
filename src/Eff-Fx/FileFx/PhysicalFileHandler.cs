@@ -6,11 +6,11 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Eff_Fx.FileSystemIO
+namespace Eff_Fx.FileFx
 {
-	public abstract class PhysicalFileSystemHandlerBase : EffectHandler
+	public abstract class PhysicalFileHandlerBase : EffectHandler
 	{
-		public PhysicalFileSystemHandlerBase(string root)
+		public PhysicalFileHandlerBase(string root)
 		{
 			Root = root;
 		}
@@ -26,9 +26,9 @@ namespace Eff_Fx.FileSystemIO
 	// in such a way that streams are also types with effects, so IO has no meaning outside effect 
 	// handler scope.
 
-	public class PhysicalFileSystemHandler : PhysicalFileSystemHandlerBase
+	public class PhysicalFileHandler : PhysicalFileHandlerBase
 	{
-		public PhysicalFileSystemHandler(string root) : base(root) { }
+		public PhysicalFileHandler(string root) : base(root) { }
 
 		public override ValueTask Handle<TResult>(EffectAwaiter<TResult> awaiter)
 		{

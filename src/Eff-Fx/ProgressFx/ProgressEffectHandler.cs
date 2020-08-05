@@ -3,7 +3,7 @@ using Nessos.Effects.Handlers;
 using System;
 using System.Threading.Tasks;
 
-namespace Eff_Fx.ProgressIO
+namespace Eff_Fx.ProgressFx
 {
     public class ProgressEffectHandler<TProgress> : EffectHandler
 	{
@@ -13,7 +13,7 @@ namespace Eff_Fx.ProgressIO
 
 		public override ValueTask Handle<TResult>(EffectAwaiter<TResult> awaiter)
 		{
-			if (awaiter is EffectAwaiter<Unit> { Effect: ProgressEffect<TProgress> info } awtr)
+			if (awaiter is EffectAwaiter<Unit> { Effect: ProgressReportEffect<TProgress> info } awtr)
 			{
 				_progress.Report(info.Value);
 				awtr.SetResult(Unit.Value);

@@ -2,7 +2,7 @@
 using Nessos.Effects.Handlers;
 using System.Threading.Tasks;
 
-namespace Eff_Fx.StateIO
+namespace Eff_Fx.StateFx
 {
     public class StateEffectHandler<TState> : EffectHandler
 	{

@@ -3,8 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace Eff_Fx.FileSystemIO
+namespace Eff_Fx.FileFx
 {
+    /// <summary>
+    /// File system effect.
+    /// </summary>
 	public static class FileSystemEffect
 	{
 		public static GetPhysicalPathEffect ToPhysicalPath((string path, FileKind kind) info) => new GetPhysicalPathEffect(info.path, info.kind);
@@ -18,6 +21,9 @@ namespace Eff_Fx.FileSystemIO
 		public static DeleteFileEffect Delete((string path, FileKind kind) info) => new DeleteFileEffect(info.path, info.kind);
 	}
 
+    /// <summary>
+    /// File effect.
+    /// </summary>
 	public static class FileEffect
 	{
 		public static FileKind Kind => FileKind.File;
@@ -43,7 +49,11 @@ namespace Eff_Fx.FileSystemIO
 		public static GetFileOutputStreamEffect OpenWrite(string path) => new GetFileOutputStreamEffect(path);
 	}
 
-	public static class DirectoryIO
+
+    /// <summary>
+    /// Directory effect.
+    /// </summary>
+	public static class DirectoryEffect
 	{
 		public static FileKind Kind => FileKind.Directory;
 

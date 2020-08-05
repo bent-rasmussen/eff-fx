@@ -2,7 +2,7 @@
 using System;
 using System.Threading.Tasks;
 
-namespace Eff_Fx.TemporalIO
+namespace Eff_Fx.TemporalFx
 {
     public class DateTimeNowEffectHandler : EffectHandler
 	{
