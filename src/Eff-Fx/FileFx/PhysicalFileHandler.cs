@@ -156,11 +156,6 @@ namespace Eff_Fx.FileFx
 						}
 					}
 					break;
-
-				// Unhandled effects
-
-				default:
-					throw new NotSupportedException(awaiter.Effect.GetType().Name);
 			}
 
 			return default;

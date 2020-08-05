@@ -9,7 +9,11 @@ namespace Eff_Fx
         static async Task Main(string[] args)
         {
             Console.WriteLine("Executing...");
-            await FileTest.Test(@"c:\");
+            //await FileTest.Test(@"c:\");
+
+            var physicalHandler = new PhysicalFileHandler(@"c:\");
+            await FileTest.TestImpl().Run(physicalHandler);
+
             Console.WriteLine("Done.");
         }
     }

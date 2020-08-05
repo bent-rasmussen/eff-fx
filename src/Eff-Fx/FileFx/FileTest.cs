@@ -17,7 +17,7 @@ namespace Eff_Fx.FileFx
 			await TestImpl().Run(physicalHandler);
 		}
 
-		static async Eff TestImpl()
+		public static async Eff TestImpl()
 		{
 			// collect file infos
 			var results = new List<dynamic>();
