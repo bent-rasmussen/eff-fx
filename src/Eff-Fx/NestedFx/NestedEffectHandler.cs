@@ -25,11 +25,18 @@ namespace Eff_Fx.NestedFx
 
         public override async ValueTask Handle<TResult>(EffectAwaiter<TResult> awaiter)
         {
-            foreach (var handler in _handlers)
+            if (awaiter is EffectAwaiter<IEffectHandler> { Effect: GetCurrentHandlerEffect _ } awtr)
             {
-                await handler.Handle(awaiter);
-                if (awaiter.IsCompleted)
-                    break;
+                awtr.SetResult(this);
+            }
+            else
+            {
+                foreach (var handler in _handlers)
+                {
+                    await handler.Handle(awaiter);
+                    if (awaiter.IsCompleted)
+                        break;
+                }
             }
         }
     }
